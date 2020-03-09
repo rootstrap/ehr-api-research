@@ -20,12 +20,10 @@
 
 8. [Procedure](./results/Procedure.md)
 
-9. [Procedure](./results/Procedure.md)
+9. [Medical Results](./results/MedicalResults.md)
 
-10. [Medical Results](./results/MedicalResults.md)
+10. [Vitals](./results/Vitals.md)
 
-11. [Vitals](./results/Vitals.md)
+11. [Demographics](./results/Demographics.md)
 
-12. [Demographics](./results/Demographics.md)
-
-13. [Social History](./results/SocialHistory.md)
+12. [Social History](./results/SocialHistory.md)
