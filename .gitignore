@@ -39,6 +39,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+1upwebapp/
 jspm_packages/
 
 # TypeScript v1 declaration files

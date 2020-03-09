@@ -207,6 +207,72 @@
 					"response": []
 				},
 				{
+					"name": "Get Patient Medication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/Medication",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"Medication"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Diagnostic Report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/DiagnosticReport",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"DiagnosticReport"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
 					"name": "Get Patient Medication Orders",
 					"request": {
 						"auth": {
@@ -722,7 +788,7 @@
 			"name": "Providers",
 			"item": [
 				{
-					"name": "17. Provider Search API",
+					"name": "Provider Search API",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -820,21 +886,21 @@
 	],
 	"variable": [
 		{
-			"id": "f36b2061-512a-4d0a-adfa-1a6b156fcd5a",
+			"id": "7c6631f0-b48a-4285-8c1e-36e558e432ee",
 			"key": "client_secret",
 			"value": "p7epDthaRoYqrk7WdDcNgfOjQQ2qdQOR",
 			"type": "string"
 		},
 		{
-			"id": "141f01c3-1eff-4c02-b98b-f9002caa515c",
+			"id": "008a8f66-06a4-452f-845d-7042c0efecfa",
 			"key": "client_id",
 			"value": "93dea9211019432c96dd11bf7411ad95",
 			"type": "string"
 		},
 		{
-			"id": "4c21d885-8936-4175-b335-6949edc6af35",
+			"id": "93572da4-e7ea-4522-907f-71ca72cfdd4e",
 			"key": "access_token",
-			"value": "a8ce902cd6f0436891bffaa8694b1e15",
+			"value": "bc56f10fa1434c5f81570a58eb70edb6",
 			"type": "string"
 		}
 	],

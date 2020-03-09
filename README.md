@@ -53,7 +53,7 @@ Comparison between 1UP Health and HumanAPI
     `https://quick.1up.health/connect/4707?access_token={access_token}`
     ```
 
-6. Run the app to get the access_token on the 1UP callback
+6. Run the [app](https://github.com/1uphealth/1upwebapp) to get the access_token on the 1UP callback
 
 7. Once access_token was generated you can use PostMan endpoints under `/Get Patient Info`
 

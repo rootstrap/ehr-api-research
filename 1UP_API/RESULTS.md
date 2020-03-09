@@ -1,6 +1,6 @@
 ### Postman endpoints collection
 
-1. [Collection](./results/1upHealth_API_Collection.postman_collection.json)
+[Collection](./results/1upHealth_API_Collection.postman_collection.json)
 
 ### JSON data sets results
 
@@ -14,23 +14,27 @@
 
 5. [Immunization](./results/Immunization.md)
 
-6. [Procedure](./results/Procedure.md)
+6. [DiagnosticReport](./results/DiagnosticReport.md)
 
-7. [DiagnosticReport](./results/DiagnosticReport.md)
+7. [Medication](./results/Medication.md)
 
-8. [DetectedIssue](./results/DetectedIssue.md)
+8. [MedicationStatement](./results/MedicationStatement.md)
 
-9. [CarePlan](./results/CarePlan.md)
+9. [MedicationOrder](./results/MedicationOrder.md)
 
-10. [FamilyMemberHistory](./results/FamilyMemberHistory.md)
+10. [Observation](./results/Observation.md)
 
-11. [MedicationStatement](./results/MedicationStatement.md)
+11. [Condition](./results/Condition.md)
 
-12. [MedicationOrder](./results/MedicationOrder.md)
+12. [DataBulk](./results/DataBulk.md)
 
-13. [Observation](./results/Observation.md)
+---------
 
-14. [Condition](./results/Condition.md)
+13. [FamilyMemberHistory](./results/FamilyMemberHistory.md)
 
-15. [DataBulk](./results/DataBulk.md)
+14. [CarePlan](./results/CarePlan.md)
+
+15. [DetectedIssue](./results/DetectedIssue.md)
+
+16. [Procedure](./results/Procedure.md)
 
