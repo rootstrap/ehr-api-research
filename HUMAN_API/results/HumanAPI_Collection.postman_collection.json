@@ -1,0 +1,548 @@
+{
+	"info": {
+		"_postman_id": "bbd39da5-50ce-47c9-bd9e-6065e609b773",
+		"name": "HumanAPI Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Patient info",
+			"item": [
+				{
+					"name": "Get Patient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/profile",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Allergies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/allergies",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"allergies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Encounters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/encounters",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"encounters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Immunization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/immunizations",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"immunizations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Medication",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/medications",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"medications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Care Plan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/plans_of_care",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"plans_of_care"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Issues",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/issues",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"issues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Procedures",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/procedures",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"procedures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Medical Results",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/test_results",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"test_results"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Vitals",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/vitals",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"vitals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Demographics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/demographics",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"demographics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Social History",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/social_history",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"social_history"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Generate Session Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_id\": \"{{client_id}}\",\n  \"client_user_id\": \"{{client_user_id}}\",\n  \"client_user_email\": \"{{client_user_email}}\",\n  \"client_secret\": \"{{client_secret}}\",\n  \"type\": \"session\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.humanapi.co/v1/connect/token",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Access Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_id\": \"{{client_id}}\",\n  \"client_user_id\": \"{{client_user_id}}\",\n  \"client_secret\": \"{{client_secret}}\",\n  \"type\": \"access\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://auth.humanapi.co/v1/connect/token",
+							"protocol": "https",
+							"host": [
+								"auth",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "984258d3-5be3-45a4-a4fd-8571d8e5d523",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "deb7afdd-d92e-4bbc-9145-5a7a0743a22d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "13d9e6ec-729d-4996-8b94-da10626c1483",
+			"key": "client_secret",
+			"value": "90c702a67ff0a16b3b3b347b166ac7e6af3dac85",
+			"type": "string"
+		},
+		{
+			"id": "74dd2046-6b6c-4ea0-84e8-ccc4bd8d820c",
+			"key": "client_id",
+			"value": "5c7e67aa445c92f8a7c2f4ae4a0c3dc320035a2b",
+			"type": "string"
+		},
+		{
+			"id": "1d00f196-3669-46d8-9d07-ee8f8caba4f0",
+			"key": "access_token",
+			"value": "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjZNWVpZckM1N2licTJMNDdQNlhhOTk0VWJROWdBTFdDXzFqRnJuRUdiV1EuZ0ZCVUN4akt0aG0xNVlnd1VEcHNSa3RwVkdpMm53Yk9FMFZkaGNTckhWRT0iLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM3ODM3MzgsImV4cCI6MTU4Mzg3MDEzOCwiY2lkIjoiMG9hdWx2ZGJkWTF2T013OWMyOTYiLCJ1aWQiOiIwMHUzNnBibTNvcG5hd2E0TDI5NyIsInNjcCI6WyJvZmZsaW5lX2FjY2VzcyIsIm9wZW5pZCJdLCJzdWIiOiJhbm9uLXVzZXIrMTNmNzdiYjAtNWY1MC0xMWVhLWFiZmEtZmY5YmMwYTI2MGIxQG5vdC5odW1hbmFwaS5jbyIsImNsaWVudElkIjoiNWM3ZTY3YWE0NDVjOTJmOGE3YzJmNGFlNGEwYzNkYzMyMDAzNWEyYiIsImh1bWFuSWQiOiJiYTNjZmQwMjBkYmFlYjI1NTg4NThjNGUwYjdmZTQ4ZSIsImV4dGVybmFsSWQiOiJIdW1hbl8zODk4OTc4NzgiLCJncm91cHMiOlsiZW5kdXNlcnNfcGhpIl0sInVzZXJJZCI6IjVlNjFiMWNjN2YyYWFjOGFiMWQ4N2I4MSJ9.DayhZb3L6x0TUA5VIIikA1m_POD-e_YZ1Ug3JEJZHz_J0GZElZsRd635YKbEVn_6BcirGLVP1Xejcpd0KdJUeyecA5Iow8h7Ku5vWmAHQi-NW27Bri2gqC1skUiLPSa9FKrHVk7hoiyuQZEoD3-gX5CK1tzyOMZZepYxc4n0sCmxqYcYjg3dDw6X3ccns-88T-dLuTsmxwDICEq6FL5WJzufXHu9Q9EtWC1AJ3at5yCLUSy3G6oboEsAWq7MFH1nBhM8zoLE_rOmH9kGnSdij0DH9uTBhtdJZRHWWkz9uoeVbppTN-t7v8DSWfDcon2G_FNrO2aLHFoyvBu4A2f1Zw",
+			"type": "string"
+		},
+		{
+			"id": "bbb2999d-e3da-43d2-a4f0-8b3d3efc907e",
+			"key": "client_user_id",
+			"value": "Human_389897878",
+			"type": "string"
+		},
+		{
+			"id": "f3427dc7-7ed0-4281-9b01-2f6ceb301685",
+			"key": "client_user_email",
+			"value": "pablo.blanco@rootstrap.com",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": []
+}

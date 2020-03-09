@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Human API demo</title>
+    <!-- includes the following script tag to import connectJs -->
+    <script src="https://cdn.humanapi.co/humanapi-connect-client@latest.js"></script>
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            console.log('LOADED!!');
+            document.getElementById("connectBTN").onclick = function () {
+
+                HumanConnect.open({
+                    token: "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULkhka3NtT0h0YXVvLXUxam8xLXVqcDVXRUZCTndweC1qM0sxYmtFcHNEd0EiLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM3NzI2NzUsImV4cCI6MTU4Mzc3NjI3NSwiY2lkIjoiMG9hdWx2aWRxdE5VeUZlYkoyOTYiLCJ1aWQiOiIwMHUzNnBibTNvcG5hd2E0TDI5NyIsInNjcCI6WyJhbm9ueW1vdXMiXSwic3ViIjoiYW5vbi11c2VyKzEzZjc3YmIwLTVmNTAtMTFlYS1hYmZhLWZmOWJjMGEyNjBiMUBub3QuaHVtYW5hcGkuY28iLCJjbGllbnRJZCI6IjVjN2U2N2FhNDQ1YzkyZjhhN2MyZjRhZTRhMGMzZGMzMjAwMzVhMmIiLCJodW1hbklkIjoiYmEzY2ZkMDIwZGJhZWIyNTU4ODU4YzRlMGI3ZmU0OGUiLCJncm91cHMiOlsiZW5kdXNlcnNfYW5vbnltb3VzIl0sInVzZXJJZCI6IjVlNjFiMWNjN2YyYWFjOGFiMWQ4N2I4MSJ9.i3-3h7sCA6n3DLT1F91-OTk6hmj4mBFdI3czaWXyQxusMgmso36gBEsMHRrktkeIW6TlstPttQO6J8gB5VsuG441_RAuxq6bizv9BpASFEC0WAthchxno1f4Xwr81oeLqKDahVHxiESi19dkiRtb994N8wdpE6TdawEmRngGEQLn4xMReMktO1fZHd58Sk40W6MxUU2d9pDIGvJGBlg444Jkn6WvGTkqZ6kq1eEeqjodqM74QdhKXmbjzN2xRgRhfCZVwAO-0-p-2WsyrRUCgN6pzJmpMGLZtGNV3IZNR6bPf-DuDQyXLmtKtEhkuJY_ClcGyLk7r1Lnb7uqB7GF_Q",
+                    onClose: handleClose, // invoked when the user closes Connect
+                    onConnectSource: handleConnect, // invoked when the user connects a source
+                    onDisconnectSource: handleDisconnect, // invoked when the user disconnects a source
+                });
+            };
+
+        });
+
+        // Handler for Connect onClose option
+        function handleClose(response) {
+            var results = response.sessionResults;
+            console.log("User closed connect widget", response);
+
+            if (response.status === "SUCCESS") {
+                console.log("User connected", results.connectedSources.length, "data sources");
+            }
+            else {
+                console.log("Widget closed with error", response.status);
+            }
+        };
+
+        function handleConnect(response) {
+            console.log("Connected a source")
+        };
+
+        function handleDisconnect(response) {
+            console.log("Disconnected a source")
+        };
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Human API demo</h1>
+    <button id="connectBTN">Connect your health data</button>
+</body>
+
+</html>

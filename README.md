@@ -9,3 +9,7 @@ Comparison between 1UP Health and HumanAPI
 
 
 ## Human API
+
+>**Results and Postman collection [here](./HUMAN_API/RESULTS.md)**
+
+>**Steps followed [here](./HUMAN_API/STEPS.md)**
