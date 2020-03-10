@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "bbd39da5-50ce-47c9-bd9e-6065e609b773",
+		"_postman_id": "ae842876-57e3-4899-8e4b-908cab783c72",
 		"name": "HumanAPI Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -38,6 +38,40 @@
 								"profile"
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient CCD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/ccds",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"ccds"
+							]
+						},
+						"description": "The CCD specification is a constraint on the HL7 Clinical Document Architecture (CDA) standard. The CDA specifies that the content of the document consists of a mandatory textual part (which ensures human interpretation of the document contents) and optional structured parts (for software processing)."
 					},
 					"response": []
 				},
@@ -488,6 +522,107 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Wellness",
+			"item": [
+				{
+					"name": "Get Patient Sleep",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/sleeps",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"sleeps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Human (Summary)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Sources",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.humanapi.co/v1/human/sources",
+					"protocol": "https",
+					"host": [
+						"api",
+						"humanapi",
+						"co"
+					],
+					"path": [
+						"v1",
+						"human",
+						"sources"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [
@@ -514,31 +649,31 @@
 	],
 	"variable": [
 		{
-			"id": "13d9e6ec-729d-4996-8b94-da10626c1483",
+			"id": "8549fda5-e61e-49fb-95fd-677782b6b0ba",
 			"key": "client_secret",
 			"value": "90c702a67ff0a16b3b3b347b166ac7e6af3dac85",
 			"type": "string"
 		},
 		{
-			"id": "74dd2046-6b6c-4ea0-84e8-ccc4bd8d820c",
+			"id": "15d9aaf4-4461-489a-9440-54a849131e92",
 			"key": "client_id",
 			"value": "5c7e67aa445c92f8a7c2f4ae4a0c3dc320035a2b",
 			"type": "string"
 		},
 		{
-			"id": "1d00f196-3669-46d8-9d07-ee8f8caba4f0",
+			"id": "0138df70-463d-4e0b-b325-139154e08bab",
 			"key": "access_token",
-			"value": "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjZNWVpZckM1N2licTJMNDdQNlhhOTk0VWJROWdBTFdDXzFqRnJuRUdiV1EuZ0ZCVUN4akt0aG0xNVlnd1VEcHNSa3RwVkdpMm53Yk9FMFZkaGNTckhWRT0iLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM3ODM3MzgsImV4cCI6MTU4Mzg3MDEzOCwiY2lkIjoiMG9hdWx2ZGJkWTF2T013OWMyOTYiLCJ1aWQiOiIwMHUzNnBibTNvcG5hd2E0TDI5NyIsInNjcCI6WyJvZmZsaW5lX2FjY2VzcyIsIm9wZW5pZCJdLCJzdWIiOiJhbm9uLXVzZXIrMTNmNzdiYjAtNWY1MC0xMWVhLWFiZmEtZmY5YmMwYTI2MGIxQG5vdC5odW1hbmFwaS5jbyIsImNsaWVudElkIjoiNWM3ZTY3YWE0NDVjOTJmOGE3YzJmNGFlNGEwYzNkYzMyMDAzNWEyYiIsImh1bWFuSWQiOiJiYTNjZmQwMjBkYmFlYjI1NTg4NThjNGUwYjdmZTQ4ZSIsImV4dGVybmFsSWQiOiJIdW1hbl8zODk4OTc4NzgiLCJncm91cHMiOlsiZW5kdXNlcnNfcGhpIl0sInVzZXJJZCI6IjVlNjFiMWNjN2YyYWFjOGFiMWQ4N2I4MSJ9.DayhZb3L6x0TUA5VIIikA1m_POD-e_YZ1Ug3JEJZHz_J0GZElZsRd635YKbEVn_6BcirGLVP1Xejcpd0KdJUeyecA5Iow8h7Ku5vWmAHQi-NW27Bri2gqC1skUiLPSa9FKrHVk7hoiyuQZEoD3-gX5CK1tzyOMZZepYxc4n0sCmxqYcYjg3dDw6X3ccns-88T-dLuTsmxwDICEq6FL5WJzufXHu9Q9EtWC1AJ3at5yCLUSy3G6oboEsAWq7MFH1nBhM8zoLE_rOmH9kGnSdij0DH9uTBhtdJZRHWWkz9uoeVbppTN-t7v8DSWfDcon2G_FNrO2aLHFoyvBu4A2f1Zw",
+			"value": "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlI1UWJ4d25aRTdKR0liT2RYcTdqZThtdWhCOVAwUmlRTXN4aTlNY2JPc1kuaEE4eVJPQTcxZ2ZNU3I0TU5yWDExTmxPSUYwWVRpbzhmTW1xTDhQYVhkTT0iLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM4NDQ2ODQsImV4cCI6MTU4MzkzMTA4NCwiY2lkIjoiMG9hdWx2ZGJkWTF2T013OWMyOTYiLCJ1aWQiOiIwMHUzNnBibTNvcG5hd2E0TDI5NyIsInNjcCI6WyJvZmZsaW5lX2FjY2VzcyIsIm9wZW5pZCJdLCJzdWIiOiJhbm9uLXVzZXIrMTNmNzdiYjAtNWY1MC0xMWVhLWFiZmEtZmY5YmMwYTI2MGIxQG5vdC5odW1hbmFwaS5jbyIsImNsaWVudElkIjoiNWM3ZTY3YWE0NDVjOTJmOGE3YzJmNGFlNGEwYzNkYzMyMDAzNWEyYiIsImh1bWFuSWQiOiJiYTNjZmQwMjBkYmFlYjI1NTg4NThjNGUwYjdmZTQ4ZSIsImV4dGVybmFsSWQiOiJIdW1hbl8zODk4OTc4NzgiLCJncm91cHMiOlsiZW5kdXNlcnNfcGhpIl0sInVzZXJJZCI6IjVlNjFiMWNjN2YyYWFjOGFiMWQ4N2I4MSJ9.B2rqIB2_4WPjo5RrOBqOUFrKu1hM_loFxaUC4mIcTcOEcnsGL5P6SAOOmzIqXn_Kos7P7jdWCYrf7LnD6JaCLvNGzLtmhMzMz1ujxgSqB69g6g_n4dkF7AH7WKfzm3V0QGMTTbtZhnQ_rkd0PHl-PdUBsqUzQ_YgbvP-BXj3rl_21dj7TdCgRVzLXNw1KKS9NSww5GxTayesoztvzFMF8edVXyQX74gXRHRcRrD90k4rZ5vPxKXeXO-eBx2fAGJrNg_gZ5xMSaFxyb3vEYbiQrbsRbrI5NF3V_7ZdigXSxzlicX_mDII4YK-BKAezftPzk7RWnGoOPeM5TByh3MHQw",
 			"type": "string"
 		},
 		{
-			"id": "bbb2999d-e3da-43d2-a4f0-8b3d3efc907e",
+			"id": "9db5e036-af76-4cd2-af0b-23b5752b60fa",
 			"key": "client_user_id",
 			"value": "Human_389897878",
 			"type": "string"
 		},
 		{
-			"id": "f3427dc7-7ed0-4281-9b01-2f6ceb301685",
+			"id": "da57224b-8407-495f-bf58-c6b8845d8945",
 			"key": "client_user_email",
 			"value": "pablo.blanco@rootstrap.com",
 			"type": "string"

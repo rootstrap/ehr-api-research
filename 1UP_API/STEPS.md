@@ -1,51 +1,60 @@
+### API Docs
+
+https://1up.health/dev
+
 ### Steps followed
 
 1. Create a developer account here: https://1up.health/patient/user/register
 
-2. Once account created you can get to devConsole here: https://1up.health/devconsole
+2. Once account created you can get to devConsole here:
+   https://1up.health/devconsole
 
-    ```
-    user: rsdemo 
+   ```
+   user: rsdemo
 
-    pass: ?!ZmL;'<_%LHw3tk
-    ```
+   pass: ?!ZmL;'<_%LHw3tk
+   ```
 
 3. Create a testing app
 
-    ```
-    name: 1UP Testing APP
+   ```
+   name: 1UP Testing APP
 
-    client_id: 93dea9211019432c96dd11bf7411ad95
+   client_id: 93dea9211019432c96dd11bf7411ad95
 
-    client_secret: p7epDthaRoYqrk7WdDcNgfOjQQ2qdQOR
-    ```
+   client_secret: p7epDthaRoYqrk7WdDcNgfOjQQ2qdQOR
+   ```
 
 4. Using Postman collections under `/Auth` create an user and get a token.
- 
+
 5. Using EHR API connection, we can login.
 
-    **Epic**
-    ```
-    Epic EHR ID: 4706
+   **Epic**
 
-    user / pass: fhirjason / epicepic1
+   ```
+   Epic EHR ID: 4706
 
-    `https://quick.1up.health/connect/4706?access_token={access_token}`
-    ```
+   user / pass: fhirjason / epicepic1
 
-    **Cerner**
-    ```
-    Test Cerner EHR ID: 4707
+   `https://quick.1up.health/connect/4706?access_token={access_token}`
+   ```
 
-    wilma_smart / Cerner01
+   **Cerner**
 
-    joe_smart / Cerner01
+   ```
+   Test Cerner EHR ID: 4707
 
-    timmy_smart / Cerner01
-    
-    `https://quick.1up.health/connect/4707?access_token={access_token}`
-    ```
+   wilma_smart / Cerner01
 
-6. Run the [app](https://github.com/1uphealth/1upwebapp) to get the access_token on the 1UP callback
+   joe_smart / Cerner01
 
-7. Once access_token was generated you can use PostMan endpoints under `/Get Patient Info`
+   timmy_smart / Cerner01
+
+   `https://quick.1up.health/connect/4707?access_token={access_token}`
+   ```
+
+6. Run the [app](https://github.com/1uphealth/1upwebapp) to get the access_token
+   on the 1UP callback
+
+7. Once access_token was generated you can use PostMan endpoints under
+   `/Get Patient Info`
