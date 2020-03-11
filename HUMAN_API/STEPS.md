@@ -22,7 +22,7 @@ https://reference.humanapi.co/docs
 3. To get session_token run:
 
     ```javascript
-    cd humanwebapp
+    cd app
     npm install
     node server.js
     navigate to `http://localhost:3000/getToken`

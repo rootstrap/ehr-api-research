@@ -10,7 +10,7 @@ https://1up.health/dev
    https://1up.health/devconsole
 
    ```
-   user: rsdemo
+   user: rsdemo / rsdemo2
 
    pass: ?!ZmL;'<_%LHw3tk
    ```
@@ -18,14 +18,23 @@ https://1up.health/dev
 3. Create a testing app
 
    ```
-   name: 1UP Testing APP
+   name: Testing APP
 
-   client_id: 93dea9211019432c96dd11bf7411ad95
+   client_id: c41f33a2033547b89548e537d85d9684
 
-   client_secret: p7epDthaRoYqrk7WdDcNgfOjQQ2qdQOR
+   client_secret: 6qYPeVz6kGn0Houh4Sku64i6YXYSPe1B
    ```
 
 4. Using Postman collections under `/Auth` create an user and get a token.
+
+
+3. Run the callback app by:
+
+    ```javascript
+    cd app
+    npm install
+    node server.js
+    ```
 
 5. Using EHR API connection, we can login.
 
@@ -36,7 +45,8 @@ https://1up.health/dev
 
    user / pass: fhirjason / epicepic1
 
-   `https://quick.1up.health/connect/4706?access_token={access_token}`
+   `https://api.1up.health/connect/system/clinical/4706?client_id={client_id}&access_token={access_token}`
+
    ```
 
    **Cerner**
@@ -50,11 +60,8 @@ https://1up.health/dev
 
    timmy_smart / Cerner01
 
-   `https://quick.1up.health/connect/4707?access_token={access_token}`
+   `https://api.1up.health/connect/system/clinical/4707?client_id={client_id}&access_token={access_token}`
    ```
 
-6. Run the [app](https://github.com/1uphealth/1upwebapp) to get the access_token
-   on the 1UP callback
-
-7. Once access_token was generated you can use PostMan endpoints under
+7. Once access_token was generated and EHR linked you can use postman collections under
    `/Get Patient Info`
