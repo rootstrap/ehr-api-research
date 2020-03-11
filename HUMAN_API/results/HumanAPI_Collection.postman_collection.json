@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ae842876-57e3-4899-8e4b-908cab783c72",
+		"_postman_id": "bbd39da5-50ce-47c9-bd9e-6065e609b773",
 		"name": "HumanAPI Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -38,40 +38,6 @@
 								"profile"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient CCD",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.humanapi.co/v1/human/medical/ccds",
-							"protocol": "https",
-							"host": [
-								"api",
-								"humanapi",
-								"co"
-							],
-							"path": [
-								"v1",
-								"human",
-								"medical",
-								"ccds"
-							]
-						},
-						"description": "The CCD specification is a constraint on the HL7 Clinical Document Architecture (CDA) standard. The CDA specifies that the content of the document consists of a mandatory textual part (which ensures human interpretation of the document contents) and optional structured parts (for software processing)."
 					},
 					"response": []
 				},
@@ -373,6 +339,72 @@
 					"response": []
 				},
 				{
+					"name": "Get Patient Narratives",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/narratives",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"narratives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient CCDs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.humanapi.co/v1/human/medical/ccds",
+							"protocol": "https",
+							"host": [
+								"api",
+								"humanapi",
+								"co"
+							],
+							"path": [
+								"v1",
+								"human",
+								"medical",
+								"ccds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Patient Demographics",
 					"request": {
 						"auth": {
@@ -522,107 +554,6 @@
 				}
 			],
 			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Wellness",
-			"item": [
-				{
-					"name": "Get Patient Sleep",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.humanapi.co/v1/human/sleeps",
-							"protocol": "https",
-							"host": [
-								"api",
-								"humanapi",
-								"co"
-							],
-							"path": [
-								"v1",
-								"human",
-								"sleeps"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Human (Summary)",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.humanapi.co/v1/human",
-							"protocol": "https",
-							"host": [
-								"api",
-								"humanapi",
-								"co"
-							],
-							"path": [
-								"v1",
-								"human"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Get Sources",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{access_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://api.humanapi.co/v1/human/sources",
-					"protocol": "https",
-					"host": [
-						"api",
-						"humanapi",
-						"co"
-					],
-					"path": [
-						"v1",
-						"human",
-						"sources"
-					]
-				}
-			},
-			"response": []
 		}
 	],
 	"event": [
@@ -649,33 +580,33 @@
 	],
 	"variable": [
 		{
-			"id": "671125eb-6c5a-4488-b949-28b1db1466c2",
+			"id": "ca10acf0-bf84-48c6-adb8-b0bc5551ffa8",
 			"key": "client_secret",
 			"value": "90c702a67ff0a16b3b3b347b166ac7e6af3dac85",
 			"type": "string"
 		},
 		{
-			"id": "dd48067e-5913-41f1-9331-ac3fde05be7d",
+			"id": "8929b296-3ef6-4c52-812f-7339fdd0b290",
 			"key": "client_id",
 			"value": "5c7e67aa445c92f8a7c2f4ae4a0c3dc320035a2b",
 			"type": "string"
 		},
 		{
-			"id": "0b146992-c355-4076-b0d3-e894a5019436",
+			"id": "e67277d7-81c0-4f95-9cb8-955130e7a0a3",
 			"key": "access_token",
-			"value": "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlI1UWJ4d25aRTdKR0liT2RYcTdqZThtdWhCOVAwUmlRTXN4aTlNY2JPc1kuaEE4eVJPQTcxZ2ZNU3I0TU5yWDExTmxPSUYwWVRpbzhmTW1xTDhQYVhkTT0iLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM4NDQ2ODQsImV4cCI6MTU4MzkzMTA4NCwiY2lkIjoiMG9hdWx2ZGJkWTF2T013OWMyOTYiLCJ1aWQiOiIwMHUzNnBibTNvcG5hd2E0TDI5NyIsInNjcCI6WyJvZmZsaW5lX2FjY2VzcyIsIm9wZW5pZCJdLCJzdWIiOiJhbm9uLXVzZXIrMTNmNzdiYjAtNWY1MC0xMWVhLWFiZmEtZmY5YmMwYTI2MGIxQG5vdC5odW1hbmFwaS5jbyIsImNsaWVudElkIjoiNWM3ZTY3YWE0NDVjOTJmOGE3YzJmNGFlNGEwYzNkYzMyMDAzNWEyYiIsImh1bWFuSWQiOiJiYTNjZmQwMjBkYmFlYjI1NTg4NThjNGUwYjdmZTQ4ZSIsImV4dGVybmFsSWQiOiJIdW1hbl8zODk4OTc4NzgiLCJncm91cHMiOlsiZW5kdXNlcnNfcGhpIl0sInVzZXJJZCI6IjVlNjFiMWNjN2YyYWFjOGFiMWQ4N2I4MSJ9.B2rqIB2_4WPjo5RrOBqOUFrKu1hM_loFxaUC4mIcTcOEcnsGL5P6SAOOmzIqXn_Kos7P7jdWCYrf7LnD6JaCLvNGzLtmhMzMz1ujxgSqB69g6g_n4dkF7AH7WKfzm3V0QGMTTbtZhnQ_rkd0PHl-PdUBsqUzQ_YgbvP-BXj3rl_21dj7TdCgRVzLXNw1KKS9NSww5GxTayesoztvzFMF8edVXyQX74gXRHRcRrD90k4rZ5vPxKXeXO-eBx2fAGJrNg_gZ5xMSaFxyb3vEYbiQrbsRbrI5NF3V_7ZdigXSxzlicX_mDII4YK-BKAezftPzk7RWnGoOPeM5TByh3MHQw",
+			"value": "eyJraWQiOiIyYXVjcUREWWZDTjVPdktjc09ib04wNURDWGc0YTk2MjhwY0loZXc2SDQwIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULmRXVkppVkI5MEdfX2JLWTZVU3JiT21YN0dUdnZFMFhta2NYZkZrN2JIQWMuVm4wSWZZVHBNMGErRUZTc2hDRGVDNHBPUlBjNGJkb0xaVjJuR1QxZktJUT0iLCJpc3MiOiJodHRwczovL2h1bWFuYXBpLm9rdGEuY29tL29hdXRoMi9hdXN1bHY5d2tjcEx5UDJEZDI5NiIsImF1ZCI6ImNvLmh1bWFuYXBpLnByb2R1Y3Rpb24iLCJpYXQiOjE1ODM5MzIzNzgsImV4cCI6MTU4NDAxODc3OCwiY2lkIjoiMG9hdWx2ZGJkWTF2T013OWMyOTYiLCJ1aWQiOiIwMHUzNnBlaW9lVzlIaTVMZDI5NyIsInNjcCI6WyJvZmZsaW5lX2FjY2VzcyIsIm9wZW5pZCJdLCJzdWIiOiJhbm9uLXVzZXIrNDUxMmU0ZjAtNWY1MC0xMWVhLWFkYjYtYjM2ZWYxMjYwMzY2QG5vdC5odW1hbmFwaS5jbyIsImNsaWVudElkIjoiNWM3ZTY3YWE0NDVjOTJmOGE3YzJmNGFlNGEwYzNkYzMyMDAzNWEyYiIsImh1bWFuSWQiOiJiOTAwNWI1YjhmY2Q1ODFhYTJhZGVhOTViMWNiMWUwMCIsImV4dGVybmFsSWQiOiJIdW1hbl83Mzk5OTA3NTUiLCJncm91cHMiOlsiZW5kdXNlcnNfcGhpIl0sInVzZXJJZCI6IjVlNjFiMjFmZGUzYzE2NjVmN2Y5YTg1YiJ9.jJoUPAeH21HjRmydw7kOB4qSOFjpVcUSbKFNjWI3WC6k8-lHkXAyCXoRklGSmu88mnlws1Q96FgNEVBVRQkzPhmfwAKQCEqbvoXuOsZNbQGi7Y9cWwYqmlpr7cJpRL-fs3W_f2P3ad-sx1OxquH1LSZOp5DRDMiu_ZWYpeLcLo2bqaWXpKSxqiCw-JEavkmPTFzR_FKf3wmnnlflRjBSRwaFe0ST17IZR-B-hkc0_j9CeQHG3X4rm5DOzLEdLyRUzwevgv8Dm1bVePP8D_8DQD8ilO4ClWvevdHbsTfa-FL8KJg8bipLK49Leew5mo39dVFs-5BN1IrQUPOqasWvhA",
 			"type": "string"
 		},
 		{
-			"id": "7ef5c6ec-5cd4-41ea-822a-c3d3c664c76a",
+			"id": "d6cc0788-cf4c-403b-9134-f64746540a90",
 			"key": "client_user_id",
-			"value": "Human_389897878",
+			"value": "Human_739990755",
 			"type": "string"
 		},
 		{
-			"id": "50de8aae-bab4-478b-a9c8-2751660ec9d0",
+			"id": "047fd362-9dde-4dac-85dd-0983def1f753",
 			"key": "client_user_email",
-			"value": "pablo.blanco@rootstrap.com",
+			"value": "anthony@rootstrap.com",
 			"type": "string"
 		}
 	],

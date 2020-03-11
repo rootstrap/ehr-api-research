@@ -27,3 +27,8 @@
 11. [Demographics](./results/Demographics.md)
 
 12. [Social History](./results/SocialHistory.md)
+
+13. [Narratives](./results/Narratives.md)
+
+14. [Patient CCDs](./results/CCD.md)
+
