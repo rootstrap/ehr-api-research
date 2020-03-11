@@ -42,6 +42,39 @@
 					"response": []
 				},
 				{
+					"name": "Get Patient Body Site",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/BodySite",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"BodySite"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4.\n\nOnce you have your OAuth Access Token, you can make the following call to obtain a bundle of available FHIR Resources (in this case Patient, but you can also obtain other resources as listed here - https://1up.health/dev/reference/fhir-resources). You can also include https://api.1up.health/fhir/dstu2/Patient/{{resource_id}} when you know the resource id."
+					},
+					"response": []
+				},
+				{
 					"name": "Get Patient Encounters",
 					"request": {
 						"auth": {
@@ -618,7 +651,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://api.1up.health/user-management/v1/user/auth-code?app_user_id=3&client_id={{client_id}}&client_secret={{client_secret}}",
+							"raw": "https://api.1up.health/user-management/v1/user/auth-code?app_user_id=12345&client_id={{client_id}}&client_secret={{client_secret}}",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -634,7 +667,7 @@
 							"query": [
 								{
 									"key": "app_user_id",
-									"value": "3"
+									"value": "12345"
 								},
 								{
 									"key": "client_id",
@@ -656,7 +689,7 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "https://api.1up.health/fhir/oauth2/token?client_id={{client_id}}&client_secret={{client_secret}}&code=12ef2577c1264f6b8a3cedd733ae6ae8&grant_type=authorization_code",
+							"raw": "https://api.1up.health/fhir/oauth2/token?client_id={{client_id}}&client_secret={{client_secret}}&code=33bb25fed09a40ffbb662261151e39fa&grant_type=authorization_code",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -679,7 +712,7 @@
 								},
 								{
 									"key": "code",
-									"value": "12ef2577c1264f6b8a3cedd733ae6ae8"
+									"value": "33bb25fed09a40ffbb662261151e39fa"
 								},
 								{
 									"key": "grant_type",
@@ -886,21 +919,21 @@
 	],
 	"variable": [
 		{
-			"id": "7c6631f0-b48a-4285-8c1e-36e558e432ee",
+			"id": "0ab11cc7-67f8-4b87-8a04-1320d5276f86",
 			"key": "client_secret",
-			"value": "p7epDthaRoYqrk7WdDcNgfOjQQ2qdQOR",
+			"value": "6qYPeVz6kGn0Houh4Sku64i6YXYSPe1B",
 			"type": "string"
 		},
 		{
-			"id": "008a8f66-06a4-452f-845d-7042c0efecfa",
+			"id": "d7df9343-4427-438e-aa41-df8fad514fe3",
 			"key": "client_id",
-			"value": "93dea9211019432c96dd11bf7411ad95",
+			"value": "c41f33a2033547b89548e537d85d9684",
 			"type": "string"
 		},
 		{
-			"id": "93572da4-e7ea-4522-907f-71ca72cfdd4e",
+			"id": "e34b7e8b-21a7-4022-9c39-d72cba16ce97",
 			"key": "access_token",
-			"value": "bc56f10fa1434c5f81570a58eb70edb6",
+			"value": "8c5fd557d5294e76bc737905d2f20604",
 			"type": "string"
 		}
 	],
