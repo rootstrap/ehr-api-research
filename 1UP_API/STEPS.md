@@ -20,30 +20,29 @@ https://1up.health/dev
    ```
    name: Testing APP
 
-   client_id: c41f33a2033547b89548e537d85d9684
+   client_id: 28aad52fc7ba45f4b7b031fda58b5213
 
-   client_secret: 6qYPeVz6kGn0Houh4Sku64i6YXYSPe1B
+   client_secret: 0Qhrs6qLnp1w7TCavybvg37KUg39FNay
    ```
 
 4. Using Postman collections under `/Auth` create an user and get a token.
 
+3) Run the callback app by:
 
-3. Run the callback app by:
+   ```javascript
+   cd app
+   npm install
+   node server.js
+   ```
 
-    ```javascript
-    cd app
-    npm install
-    node server.js
-    ```
-
-5. Using EHR API connection, we can login.
+4) Using EHR API connection, we can login.
 
    **Epic**
 
    ```
    Epic EHR ID: 4706
 
-   user / pass: fhirjason / epicepic1
+   user / pass: fhirjason / epicepic1 (9999)
 
    `https://api.1up.health/connect/system/clinical/4706?client_id={client_id}&access_token={access_token}`
 
@@ -54,14 +53,14 @@ https://1up.health/dev
    ```
    Test Cerner EHR ID: 4707
 
-   wilma_smart / Cerner01
+   wilma_smart / Cerner01 (8888)
 
-   joe_smart / Cerner01
+   joe_smart / Cerner01 (12345)
 
-   timmy_smart / Cerner01
+   timmy_smart / Cerner01 (54321)
 
    `https://api.1up.health/connect/system/clinical/4707?client_id={client_id}&access_token={access_token}`
    ```
 
-7. Once access_token was generated and EHR linked you can use postman collections under
-   `/Get Patient Info`
+5) Once access_token was generated and EHR linked you can use postman
+   collections under `/Get Patient Info`
