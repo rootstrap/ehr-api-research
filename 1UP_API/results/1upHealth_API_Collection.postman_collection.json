@@ -42,6 +42,39 @@
 					"response": []
 				},
 				{
+					"name": "Get Patient Allergies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/AllergyIntolerance",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"AllergyIntolerance"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
 					"name": "Get Patient Binary",
 					"request": {
 						"auth": {
@@ -109,7 +142,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Patient Allergies",
+					"name": "Get Patient Care Plan",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -124,7 +157,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/AllergyIntolerance",
+							"raw": "https://api.1up.health/fhir/dstu2/CarePlan",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -134,7 +167,7 @@
 							"path": [
 								"fhir",
 								"dstu2",
-								"AllergyIntolerance"
+								"CarePlan"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -142,7 +175,73 @@
 					"response": []
 				},
 				{
-					"name": "Get Patient Medical Results",
+					"name": "Get Patient Condition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/Condition",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"Condition"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Device",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/Device",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"Device"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Diagnostic Report",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -168,6 +267,105 @@
 								"fhir",
 								"dstu2",
 								"DiagnosticReport"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Document Reference",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/DocumentReference",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"DocumentReference"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Family History",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/FamilyMemberHistory",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"FamilyMemberHistory"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Immunization",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/Immunization",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"Immunization"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -201,6 +399,39 @@
 								"fhir",
 								"dstu2",
 								"DetectedIssue"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Medical Results",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/DiagnosticReport",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"DiagnosticReport"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -307,7 +538,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Patient Diagnostic Report",
+					"name": "Get Patient Observation",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -322,7 +553,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/DiagnosticReport",
+							"raw": "https://api.1up.health/fhir/dstu2/Observation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -332,7 +563,7 @@
 							"path": [
 								"fhir",
 								"dstu2",
-								"DiagnosticReport"
+								"Observation"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -340,7 +571,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Patient Family History",
+					"name": "Get Patient Practitioner",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -355,7 +586,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/FamilyMemberHistory",
+							"raw": "https://api.1up.health/fhir/dstu2/Practitioner",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -365,40 +596,7 @@
 							"path": [
 								"fhir",
 								"dstu2",
-								"FamilyMemberHistory"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Care Plan",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/CarePlan",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"CarePlan"
+								"Practitioner"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -439,138 +637,6 @@
 					"response": []
 				},
 				{
-					"name": "Get Patient Related Person",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/RelatedPerson",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"RelatedPerson"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Immunization",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/Immunization",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"Immunization"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Condition",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/Condition",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"Condition"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Observation",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/Observation",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"Observation"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
-					},
-					"response": []
-				},
-				{
 					"name": "Get Patient Questionnaire",
 					"request": {
 						"auth": {
@@ -597,6 +663,72 @@
 								"fhir",
 								"dstu2",
 								"Questionnaire"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Questionnaire Response",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/QuestionnaireResponse",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"QuestionnaireResponse"
+							]
+						},
+						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Related Person",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.1up.health/fhir/dstu2/RelatedPerson",
+							"protocol": "https",
+							"host": [
+								"api",
+								"1up",
+								"health"
+							],
+							"path": [
+								"fhir",
+								"dstu2",
+								"RelatedPerson"
 							]
 						},
 						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
@@ -633,39 +765,6 @@
 							]
 						},
 						"description": "Request the analytics bulk-data endpoint with the FHIR® $export operator to retrieve a list of bulk data files for your client application to download.\n\nhttps://1up.health/dev/doc/fhir-bulk-data-export\n\nThis will return at least one bulk data download file for each resource type for which resources exist. This will only return resources that your given application client id and user id have access to. Optionally include a _type query parameter with a comma-separated list of FHIR® resources to limit the types of resources that you want to export, e.g.\n\nhttps://analytics.1up.health/bulk-data/dstu2/$export?_type=Patient,Observation"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Patient Questionnaire Response",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{access_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.1up.health/fhir/dstu2/QuestionnaireResponse",
-							"protocol": "https",
-							"host": [
-								"api",
-								"1up",
-								"health"
-							],
-							"path": [
-								"fhir",
-								"dstu2",
-								"QuestionnaireResponse"
-							]
-						},
-						"description": "You will need to include your OAuth Access Token as a Bearer Token in the Authorization Header. To obtain a Access Token, follow steps 1, 2, and 3 (if you are creating under a new user), or steps 2 and 3 (if creating under an existing user). Of if you have a Refresh Token you can follow Step 4."
 					},
 					"response": []
 				}
@@ -986,21 +1085,21 @@
 	],
 	"variable": [
 		{
-			"id": "54ca7bb2-3046-4cf3-b042-391c1c396a2b",
+			"id": "b37f3cf8-7c34-4306-b740-2a8939fa856b",
 			"key": "client_secret",
 			"value": "0Qhrs6qLnp1w7TCavybvg37KUg39FNay",
 			"type": "string"
 		},
 		{
-			"id": "45f1af1f-aa6f-4943-8c21-5d67a61a0c54",
+			"id": "fd8dc67e-d12b-47ea-a82b-1a039146b078",
 			"key": "client_id",
 			"value": "28aad52fc7ba45f4b7b031fda58b5213",
 			"type": "string"
 		},
 		{
-			"id": "1dfbe2e6-59ed-4748-b723-2b7c494d7966",
+			"id": "c3aa884a-89ab-4046-aac0-39bcf0324872",
 			"key": "access_token",
-			"value": "9c67111e53d0449f9aeea46cd98a4581",
+			"value": "b9da202e4ff948f499fbe20012874019",
 			"type": "string"
 		}
 	],

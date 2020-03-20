@@ -59,6 +59,10 @@ https://1up.health/dev
 
    timmy_smart / Cerner01 (54321)
 
+   fredrick_smart / Cerner01 (7777)
+
+   fredrick_smart / Cerner01 (8987)
+
    `https://api.1up.health/connect/system/clinical/4707?client_id={client_id}&access_token={access_token}`
    ```
 
