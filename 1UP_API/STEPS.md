@@ -66,5 +66,15 @@ https://1up.health/dev
    `https://api.1up.health/connect/system/clinical/4707?client_id={client_id}&access_token={access_token}`
    ```
 
-5) Once access_token was generated and EHR linked you can use postman
+**Medicare**
+
+```
+Test Medicare ID: 4748
+
+BBUser29999 / PW29999! (8986)
+
+`https://api.1up.health/connect/system/clinical/4748?client_id={client_id}&access_token={access_token}`
+```
+
+5. Once access_token was generated and EHR linked you can use postman
    collections under `/Get Patient Info`

@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "b7110a7a-d8ca-4aae-8412-a55ee2b7f176",
+		"name": "Validic API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.v2.validic.com/organizations/{{org_id}}/users?token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"v2",
+								"validic",
+								"com"
+							],
+							"path": [
+								"organizations",
+								"{{org_id}}",
+								"users"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "The first step to accessing an end user's data is to first “provision” a user in our system. Provisioning creates a representation of your end user in our system, which we’ll use to store data for that user. To do this, you’ll need to POST the following request.\n\nNote: The “uid” will be the ID you’ll use to request user data in the future. Please ensure this ID does not include any identifiable data. Doing so could violate HIPAA regulations.\n\nYou may also choose to provide the user's location, time zone, and country code. This information will only be used in the event that a data source does not provide Validic with adequate context for a timestamp."
+					},
+					"response": []
+				},
+				{
+					"name": "Get user access token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://app.validic.com/{{org_id}}/{{token}}",
+							"protocol": "https",
+							"host": [
+								"app",
+								"validic",
+								"com"
+							],
+							"path": [
+								"{{org_id}}",
+								"{{token}}"
+							]
+						},
+						"description": "The first step to accessing an end user's data is to first “provision” a user in our system. Provisioning creates a representation of your end user in our system, which we’ll use to store data for that user. To do this, you’ll need to POST the following request.\n\nNote: The “uid” will be the ID you’ll use to request user data in the future. Please ensure this ID does not include any identifiable data. Doing so could violate HIPAA regulations.\n\nYou may also choose to provide the user's location, time zone, and country code. This information will only be used in the event that a data source does not provide Validic with adequate context for a timestamp."
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh user access token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/users/{{user_id}}/refresh_token.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"users",
+								"{{user_id}}",
+								"refresh_token.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "The first step to accessing an end user's data is to first “provision” a user in our system. Provisioning creates a representation of your end user in our system, which we’ll use to store data for that user. To do this, you’ll need to POST the following request.\n\nNote: The “uid” will be the ID you’ll use to request user data in the future. Please ensure this ID does not include any identifiable data. Doing so could violate HIPAA regulations.\n\nYou may also choose to provide the user's location, time zone, and country code. This information will only be used in the event that a data source does not provide Validic with adequate context for a timestamp."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get Patient Info",
+			"item": [
+				{
+					"name": "Get Patient Devices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://syncmydevice.com/?token={{market_token}}&format=json",
+							"protocol": "https",
+							"host": [
+								"syncmydevice",
+								"com"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{market_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.validic.com/v1/profile.json?authentication_token={{user_access_token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"profile.json"
+							],
+							"query": [
+								{
+									"key": "authentication_token",
+									"value": "{{user_access_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fitness",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/fitness/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"fitness",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Routine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/routine/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"routine",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Nutrition",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/nutrition/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"nutrition",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Sleep",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/sleep/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"sleep",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Weight",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/weight/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"weight",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Diabetes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/diabetes/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"diabetes",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				},
+				{
+					"name": "Biometrics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"uid\": \"{{uid}}\",\n  \"location\":{  \n      \"timezone\":\"America/New_York\",\n      \"country_code\":\"US\"\n   }\n}"
+						},
+						"url": {
+							"raw": "https://api.validic.com/v1/organizations/{{org_id}}/biometrics/latest.json?access_token={{token}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"validic",
+								"com"
+							],
+							"path": [
+								"v1",
+								"organizations",
+								"{{org_id}}",
+								"biometrics",
+								"latest.json"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{token}}"
+								}
+							]
+						},
+						"description": "Fitness records return data for activities that are undertaken with the express purpose of exercising. These activities have a defined duration (time, distance, elevation, etc.)"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "984258d3-5be3-45a4-a4fd-8571d8e5d523",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "deb7afdd-d92e-4bbc-9145-5a7a0743a22d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "3bdf004c-063f-4421-aa9d-b10de0d005ec",
+			"key": "org_id",
+			"value": "5e7cbe744d3b8f00b057e835",
+			"type": "string"
+		},
+		{
+			"id": "906b93eb-a31d-425d-9ddf-0443fff2cfec",
+			"key": "token",
+			"value": "02c33cbae59abf18ab4e024f4c464da9",
+			"type": "string"
+		},
+		{
+			"id": "3c28084c-7c86-4ea3-a366-c8177304e6af",
+			"key": "uid",
+			"value": "277040620sol3",
+			"type": "string"
+		},
+		{
+			"id": "6f63e61c-1f8f-454c-8323-c5fbc69199e9",
+			"key": "market_token",
+			"value": "1c59bf5bed281bc9aa35ee623d131f840a9e6555b7a108835273e5b4645f80c5",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": []
+}

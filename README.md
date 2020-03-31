@@ -17,3 +17,9 @@ Comparison between 1UP Health and HumanAPI
 > **Steps followed [here](./HUMAN_API/STEPS.md)**
 
 > **Load Tests [here](./HUMAN_API/LOAD.md)**
+
+## Validic API
+
+> **Results and Postman collection [here](./VALIDIC/RESULTS.md)**
+
+> **Steps followed [here](./VALIDIC/STEPS.md)**
