@@ -1,0 +1,73 @@
+{
+  "category": "daily",
+  "checksum": "9957f70ef3b1dc1ea720f9924496562f",
+  "created_at": "2020-04-01T16:54:46.847Z",
+  "deleted_at": null,
+  "end_time": "2020-04-02T03:59:59Z",
+  "id": "92a695cc683f49228b713c503ed4d636",
+  "log_id": "2020-04-01",
+  "metrics": [
+    {
+      "origin": "manual",
+      "type": "lightly_active_duration",
+      "unit": "s",
+      "value": 1800
+    },
+    {
+      "origin": "manual",
+      "type": "active_energy_burned",
+      "unit": "kcal",
+      "value": 71
+    },
+    {
+      "origin": "device",
+      "type": "basal_energy_burned",
+      "unit": "kcal",
+      "value": 911
+    },
+    {
+      "origin": "device",
+      "type": "distance",
+      "unit": "m",
+      "value": 2.5250000000001105
+    },
+    {  "origin": "manual", 
+        "type": "distance", 
+        "unit": "m", 
+        "value": 1287.475 },
+    {
+      "origin": "device",
+      "type": "energy_burned",
+      "unit": "kcal",
+      "value": 876
+    },
+    {
+      "origin": "manual",
+      "type": "energy_burned",
+      "unit": "kcal",
+      "value": 71
+    },
+    {  "origin": "manual", 
+       "type": "steps", 
+       "unit": "count", 
+       "value": 1659 
+    }
+  ],
+  "offset_origin": "profile",
+  "segments": [],
+  "source": { 
+      "device": null, 
+      "type": "fitbit" 
+  },
+  "start_time": "2020-04-01T04:00:00Z",
+  "tags": [],
+  "type": "summary",
+  "user": {
+    "organization_id": "5c472e0b214197000165953a",
+    "uid": "chrish",
+    "user_id": "5c4735652141970001c92d51"
+  },
+  "user_notes": [],
+  "utc_offset": -14400,
+  "version": "1.0"
+}
